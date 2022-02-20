@@ -23,6 +23,9 @@ body {
 }
 .navbar-top {
   list-style-type: none;
+  overflow: hidden;
+  background: linear-gradient(to left, transparent 50%, #247ba0 90%);
+  border-radius: 40px;
   margin: 0;
   padding: 0;
   position: sticky;
@@ -55,7 +58,7 @@ body {
 }
 
 .navbar-top a.active {
-  border-bottom: 2px solid #247ba0;
+  border-bottom: 2px solid black;
 }
 
 .color-tube {
@@ -97,6 +100,7 @@ body {
   }
   .navbar-top {
     display: none;
+    border-radius: 0%;
     top: 10%;
     background: linear-gradient(to left, transparent 10%, #247ba0 90%);
     width: 30%;
