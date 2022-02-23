@@ -7,4 +7,13 @@ function MyFunction() {
     else {
         NavBar.style.display = "block";
     }
-;}
+    ;
+}
+
+fetch("../json/courses.json")
+    .then(function (resp) {
+        return resp.json();
+    })
+    .then(function (data) {
+        console.log(data[1].courseDescription);
+    })
