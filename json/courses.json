@@ -1,0 +1,44 @@
+[
+    {
+        "courseTitle": "course 1",
+        "courseNumber": 123,
+        "courseDescription": "sample text",
+        "courseLength": "12 weeks"
+    },
+    {
+        "courseTitle": "course 2",
+        "courseNumber": 123,
+        "courseDescription": "sample text",
+        "courseLength": "12 weeks"
+    },
+    {
+        "courseTitle": "course 3",
+        "courseNumber": 123,
+        "courseDescription": "sample text",
+        "courseLength": "12 weeks"
+    },
+    {
+        "courseTitle": "course 4",
+        "courseNumber": 123,
+        "courseDescription": "sample text",
+        "courseLength": "12 weeks"
+    },
+    {
+        "courseTitle": "course 5",
+        "courseNumber": 123,
+        "courseDescription": "sample text",
+        "courseLength": "12 weeks"
+    },
+    {
+        "courseTitle": "course 6",
+        "courseNumber": 123,
+        "courseDescription": "sample text",
+        "courseLength": "12 weeks"
+    },
+    {
+        "courseTitle": "course 7",
+        "courseNumber": 123,
+        "courseDescription": "sample text",
+        "courseLength": "12 weeks"
+    }
+]
