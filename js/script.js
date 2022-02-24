@@ -6,7 +6,7 @@ const gridContainer = document.getElementById('grid-container');
 
 gridContainer.appendChild(flexContainer);
 
-fetch("../json/courses.json")
+fetch("/json/courses.json")
     .then(function (resp) {
         return resp.json();
     })
