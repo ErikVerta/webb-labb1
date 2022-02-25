@@ -10,11 +10,104 @@
 </head>
 <body>
     <div id="grid-container" class="grid-container">
+      
         <ul id="navbar" class="navbar-top">
             <li><a href="index.html">Home</a></li>
             <li><a href="courses.html" class="active">Courses</a></li> 
-            <li><a href="">Cart</a></li>
+            <li><a onclick="OpenCartModal();" href="#">Cart</a></li>
         </ul>
+
+        <div id="cart-modal" class="modal" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Cart</h5>
+                <button onclick="CloseCartModal();" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div id="cart-modal-body" class="modal-body">
+              </div>
+              <div class="modal-footer">
+                <div>
+                  <span>Total:</span>
+                  <span id="total-span">0sek</span>
+                </div>
+                <button onclick="PurchaseSuccessfull();" type="button" class="btn btn-primary">Checkout</button>
+                <button onclick="CloseCartModal();" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="purchase-successfull-modal" class="modal" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Successfull</h5>
+                <button onclick="ClosePurchaseSuccessfullModal();" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Purchase Successfull.</p>
+              </div>
+              <div class="modal-footer">
+                <button onclick="ClosePurchaseSuccessfullModal();" type="button" class="btn btn-primary">OK</button>
+                <button onclick="ClosePurchaseSuccessfullModal();" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button id="create-course-btn" class="btn btn-primary">Create Course</button>
+
+        <div id="course-modal" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Create Course</h5>
+                  <button onclick="CloseCreateCourseModal();" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Course number</p>
+                  <input id="course-number-input" type="number">
+                  <p>Course title</p>
+                  <input id="course-title-input" type="text">
+                  <p>Course length in weeks</p>
+                  <input id="course-length-input" type="text">
+                  <p>Course description</p>
+                  <textarea name="course-description" id="course-description-textarea" cols="30" rows="10"></textarea>
+                </div>
+                <div class="modal-footer">
+                  <button onclick="saveCourse();" type="button" class="btn btn-primary">Create</button>
+                  <button onclick="CloseCreateCourseModal();" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="created-course-modal" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Successfull</h5>
+                  <button onclick="CloseCreatedCourseSuccessfullyModal();" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Successfully created course.</p>
+                </div>
+                <div class="modal-footer">
+                  <button onclick="CloseCreatedCourseSuccessfullyModal();" type="button" class="btn btn-primary">OK</button>
+                  <button onclick="CloseCreatedCourseSuccessfullyModal();" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
         <div class="color-tube">
             <button class="menu-toggle" onclick="MyFunction();"><img src="images/kisspng-hamburger-button-computer-icons-menu-5ae053f406cb41.4233811015246509960278.png" alt=""></button>
             <p>WestCoast</p>

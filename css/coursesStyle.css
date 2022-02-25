@@ -17,9 +17,9 @@ body {
   min-width: 100vw;
   min-height: 100vh;
   border: 1em solid #cbd4c2;
-  grid-row-gap: 5em;
+  grid-row-gap: 2em;
   grid-template-columns: auto;
-  grid-template-rows: 4em auto;
+  grid-template-rows: 4em 3em auto;
 }
 .navbar-top {
   list-style-type: none;
@@ -33,7 +33,7 @@ body {
   top: 1em;
   grid-column: 1 / 4;
   grid-row: 1 / 1;
-  z-index: 9999;
+  z-index: 9998;
 }
 .navbar-top li a {
   float: left;
@@ -78,6 +78,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  grid-row: 3;
 }
 .flex-item {
   margin: 4em;
@@ -87,6 +88,32 @@ body {
 
 .menu-toggle {
   display: none;
+}
+.cart-item-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.1em 0em;
+}
+.quantity-input {
+  width: 2.5em;
+}
+#create-course-btn {
+  position: relative;
+  display: inline;
+  width: 15%;
+  left: 84%;
+}
+#course-modal {
+  z-index: 9999;
+}
+#cart-modal {
+  z-index: 9999;
+}
+#purchase-successfull-modal {
+  z-index: 9999;
+}
+#created-course-modal {
+  z-index: 9999;
 }
 
 @media (max-width: 768px) {
@@ -137,5 +164,9 @@ body {
     margin: 1em 0em;
     width: 18em;
     height: 10em;
+  }
+  #create-course-btn {
+    width: 35%;
+    left: 60%;
   }
 }
