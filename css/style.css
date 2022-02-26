@@ -61,7 +61,6 @@ body {
 .navbar-top a.active {
   border-bottom: 2px solid black;
 }
-
 h1 {
   text-align: center;
 }
@@ -94,26 +93,6 @@ h1 {
 .menu-toggle {
   display: none;
 }
-.cart-item-titles {
-  display: flex;
-  justify-content: space-around;
-}
-.cart-item-container {
-  display: flex;
-  justify-content: end;
-}
-.quantity-input {
-  width: 2.5em;
-  position: relative;
-}
-.title-span {
-  position: relative;
-  left: -44%;
-}
-.price-span {
-  position: relative;
-  left: -22%;
-}
 
 @media (max-width: 768px) {
   .grid-container {
@@ -144,7 +123,7 @@ h1 {
   .navbar-top a.active {
     border-bottom: none;
   }
-  .color-tube1 p {
+  .color-tube p {
     font-size: 2em;
   }
   .menu-toggle {

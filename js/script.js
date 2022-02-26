@@ -1,3 +1,16 @@
+/*Responsive Navbar for mobile functionality*/
+const NavBar = document.getElementById("navbar"); 
+
+function MyFunction() {
+    if (NavBar.style.display == "block") {
+        NavBar.style.display = "none";
+    }
+    else {
+        NavBar.style.display = "block";
+    }
+    ;
+}
+
 /*Creates a flexcontainer and appends it to gridcontainer*/
 const flexContainer = document.createElement('div');
 
@@ -125,6 +138,10 @@ function updateCartItems() {
 
         removeButton.addEventListener('click', function (event) {
             const buttonClicked = event.target
+            const courseName = buttonClicked.parentElement.firstChild.innerHTML;
+            const courseToRemove = cartArray.find(c => c.courseTitle == courseName);
+            cartArray.splice(courseToRemove, 1);
+            addedCartItemsArray.splice(courseToRemove, 1);
             buttonClicked.parentElement.remove()
             CalculateTotal();
         })
@@ -271,18 +288,4 @@ function saveCourse() {
 function CloseCreatedCourseSuccessfullyModal() {
     const createdCourseModal = document.getElementById("created-course-modal");
     createdCourseModal.style.display = "none";
-}
-
-
-/*Responsive Navbar for mobile functionality*/
-    const NavBar = document.getElementById("navbar"); 
-
-function MyFunction() {
-    if (NavBar.style.display == "block") {
-        NavBar.style.display = "none";
-    }
-    else {
-        NavBar.style.display = "block";
-    }
-    ;
 }
