@@ -28,6 +28,7 @@ function fetchData() {
             cardDiv.classList.add('card');
             cardDiv.classList.add('flex-item');
             cardImg.alt = 'Card image';
+            cardImg.src = 'images/paperclip.jpg';
             cardImg.classList.add('card-img-top');
             cardDivOverlay.classList.add('card-img-overlay');
             h4.classList.add('card-title');
@@ -156,6 +157,7 @@ function PurchaseSuccessfull() {
     cartArray.length = 0;
     addedCartItemsArray.length = 0;
     CloseCartModal();
+    CalculateTotal();
     purchaseSuccessfullModal.style.display = "block";
 }
 
@@ -221,6 +223,7 @@ function saveCourse() {
     cardDiv.classList.add('card');
     cardDiv.classList.add('flex-item');
     cardImg.alt = 'Card image';
+    cardImg.src = 'images/paperclip.jpg';
     cardImg.classList.add('card-img-top');
     cardDivOverlay.classList.add('card-img-overlay');
     h4.classList.add('card-title');
